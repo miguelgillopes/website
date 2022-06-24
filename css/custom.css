@@ -1,6 +1,7 @@
 body {
   background: rgb(10, 4, 60);
   background-size: cover;
+  scroll-behavior: smooth;
 }
 
 #reatia{
@@ -15,8 +16,28 @@ body {
   color: #1c627d;
 }
 
+#aboutme{
+	height: 100vh;
+	display: none;
+}
+
+#ul-title{
+	margin-top: 20px;
+	color:  #BBBBBB;
+}
+
+#home {
+	height: 100vh;
+	display: none;
+}
+
+#contactme{
+	height: 100vh;
+	display: none;
+}
+
 .contacts {
-  	display: flex;
+  display: flex;
 	list-style: none;
 	margin-top: 2.5rem;
 }
@@ -86,4 +107,137 @@ ul {
 		box-shadow: 0 8vmin 32vmin hotpink inset, 0 4vmin 10vmin LightPink inset, 0 8vmin 8vmin MediumPurple inset,
 			0 12vmin 16vmin purple inset;
 	}
+}
+
+#arrow {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: 0px auto;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: rgb(255, 227, 216);
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-size: 12px;
+  color:  rgb(255, 227, 216);
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+#toscroll{
+    max-width: 680px;
+    margin: 120px auto;
+    padding: 25px;
+}
+
+
+.ul-skills {
+	align-items: center;
+	list-style: none;
+	margin: 1rem 0 0 0;
+
+}
+
+.skills ul {
+  grid-template: 1fr/repeat(3,1fr);
+  grid-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+
+.edu-skills {
+	align-items: center;
+	list-style: none;
+	margin: 1rem 0 0 0;
+
+}
+
+.edu ul {
+  grid-template: 1fr/repeat(3,1fr);
+  grid-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+
+.courses-skills {
+	align-items: center;
+	list-style: none;
+	margin: 1rem 0 0 0;
+
+}
+
+.courses ul {
+  grid-template: 1fr/repeat(3,1fr);
+  grid-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+
+.dates {
+	color: #92cbdf;
+	margin-right: 1rem;
+}
+
+#aboutme li{
+	color: white;
+}
+
+.highlighted {
+	color: #92cbdf;
+	margin-right: 1rem;
 }
